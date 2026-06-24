@@ -1,3 +1,7 @@
+plugins {
+    id("com.android.application")
+    id("dev.flutter.flutter-gradle-plugin")
+}
 android {
     namespace = "com.example.cabai_ai_farm_v3"
     compileSdk = flutter.compileSdkVersion
@@ -22,4 +26,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+}
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }
